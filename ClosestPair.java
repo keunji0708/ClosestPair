@@ -52,6 +52,7 @@ public class ClosestPair {
 			y_Divide_Conquer(A, q + 1, r);
 		}
 	}
+	
 	public static int x_partition(List<Point> A, int p, int r)  {
 		Point mypoint = A.get(r);
 		int i = p - 1;
@@ -69,6 +70,7 @@ public class ClosestPair {
 		A.set(r, temp);
 		return i; 
 	}
+	
 	public static int y_partition(List<Point> A, int p, int r)  {
 		Point mypoint = A.get(r);
 		int i = p - 1;
@@ -86,6 +88,7 @@ public class ClosestPair {
 		A.set(r, temp);
 		return i; 
 	}
+	
 	public static Pair Divide_Conquer(List<Point> A) {
 		ArrayList<Point> SortX= new ArrayList<Point>(A);
 		x_Divide_Conquer(SortX, 0, SortX.size() - 1); 
@@ -95,6 +98,7 @@ public class ClosestPair {
 		
 		return Closest_Pair(SortX, SortY);
 	}
+	
 	public static Pair BruteForce(List<Point> A) {
 		int size = A.size();
 		
@@ -117,6 +121,7 @@ public class ClosestPair {
 		}
 		return pair;
 	}
+	
 	public static Pair Closest_Pair(List<Point> SortX, List<Point> SortY) {
 		int size = SortX.size();
 		
